@@ -1,52 +1,247 @@
 html {
-  font-size: 16px; /* setting root font size */
+  font: 16px trebuchet, sans-serif; /*Setting root fontsize and style*/
 }
 
 body{
   height: auto;
+  margin: 0px;
 }
 
 header{
-  font-family: arial, sans-serif;
-  color: red;
-  border: 1px solid red;
+  color: darkred;
+  border: 1px solid darkred;
+  border-radius: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5px;
 }
 
 nav{
-  font-family: arial,sans-serif;
-  color: red;
-  border: 1px solid blue;
+  margin: 0px;
+  background-color: black;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
 }
 
 article{
-  border: 1px solid green;
+  padding: 1%;
+  margin: 5px;
 }
 
 footer{
+  margin: 5px;
+  background-color: black;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.address {
+  display: none;
+}
+
+.desktopphoto {
+  display: none;
+}
+
+img {
+  margin: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.link {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 4px 4px 2px #888888;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+}
+
+.link:active {
+  top: 5px;
+}
+
+.email, .tel {
+  color: inherit;
+}
+.dropdown{
+  display: none;
+}
+.dropcontent{
+  visibility: hidden;
+}
+
+.contact{
+  text-align: center;
+}
+
+.fb {
+  display: none;
+  width: 25%;
+  height: auto;
+}
+
+.fbmob {
+  width: 10%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
   border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  background-color: darkred;
+}
+.busimg {
+  border: 1px solid darkred;
+}
+h3 {
+  font-style: italic;
 }
 
 /*Following code for desktop*/
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 800px) {
   body {
     display: grid;
     grid-template-areas: "header header"
     "nav article"
     "nav article"
     "footer footer";
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 90%;
     grid-template-rows: 20% 10% 60% 10%;
+    margin: 0px;
   }
   header{
     grid-area: header;
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px;
+    color: white;
+    background: linear-gradient(to bottom left, darkred 60%, black);
+    padding-bottom: 20px;
   }
   nav{
     grid-area: nav;
+    position: static;
+    width: auto;
+    background: linear-gradient(black 75%, darkred);
+    top: auto;
   }
   article{
     grid-area: article;
+    padding: 5%;
   }
   footer{
     grid-area: footer;
+    border-radius: 0px;
+    margin: 0px;
+    background-color: darkred;
+  }
+  .desktopphoto {
+    display: inline-block;
+  }
+  .address {
+    display: block;
+  }
+  .link {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .tel {
+    pointer-events: none;
+    cursor: default; /*disabling the telephone link when on desktop*/
+    text-decoration: none;
+  }
+  img {
+    border: 2px solid darkred;
+    max-width: 95%;
+  }
+  .fb{
+    display: block;
+    border: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fbmob {
+    display: none;
+  }
+  figure { /* from stack overflow https://stackoverflow.com/questions/43334433/how-to-place-figcaption-at-the-right-side-of-figure */
+    display: flex;
+    align-items: center;
+  }
+  .busimg {
+    width: 300px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width : 465px)  {/*this section for when the nav doesn't fit horizontally*/
+  .normnav {
+    display: none;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .dropdown {
+    color: white;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .dropdown:before {
+    content: "Menu";
+  }
+  .dropdown:focus {
+    pointer-events: none;
+  }
+  .dropdown:focus .dropcontent {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .dropcontent {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    background-color: black;
+    width: 100%;
+    height: auto;
+  }
+  li {
+    padding: 20px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+}
+@media screen and (min-width : 1024px) {
+  .busimg {
+    width: 600px;
   }
 }
