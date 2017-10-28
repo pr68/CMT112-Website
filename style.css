@@ -117,7 +117,6 @@ figcaption {
   padding: 5px;
   color: white;
   background-color: darkred;
-  max-width: 300px;
   margin: auto;
 }
 .busimg {
@@ -125,6 +124,10 @@ figcaption {
 }
 h3 {
   font-style: italic;
+}
+#enter {
+  max-width: 300px;
+  display: block;
 }
 #enter:hover {
   color: darkred;
@@ -210,10 +213,10 @@ h3 {
   .fbmob {
     display: none;
   }
-  #busfig { /* from stack overflow https://stackoverflow.com/questions/43334433/how-to-place-figcaption-at-the-right-side-of-figure */
-    display: flex;
-    align-items: center;
-  }
+  .busimg,figcaption {
+  display: inline-block;
+  vertical-align: middle;
+}
   .busimg {
     width: 300px;
     height: auto;
