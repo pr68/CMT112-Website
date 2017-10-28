@@ -137,6 +137,9 @@ h3 {
   pointer-events: none;
   cursor: default;
 }
+#logo {
+  display: none;
+}
 
 /*Following code for desktop*/
 @media screen and (min-width : 800px) {
@@ -192,8 +195,8 @@ h3 {
     padding-bottom: 5px;
     padding-left: 0px;
     padding-right: 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .tel {
     pointer-events: none;
@@ -225,6 +228,15 @@ h3 {
   }
   .busimg:hover {
     content: url(businside.png);
+  }
+  #logo {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100px;
+    height: auto;
+    border: 0px;
   }
 
 }
