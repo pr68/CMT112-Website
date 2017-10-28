@@ -196,6 +196,9 @@ h3 {
     margin-left: 10px;
     margin-right: 10px;
   }
+  .busimg:hover {
+    content: url(businside.jpg);
+  }
 }
 @media screen and (max-width : 465px)  {/*this section for when the nav doesn't fit horizontally*/
   .normnav {
