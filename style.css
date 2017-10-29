@@ -240,7 +240,7 @@ h3 {
   }
 
 }
-@media screen and (max-width : 465px)  {/*this section for when the nav doesn't fit horizontally*/
+@media screen and (max-width : 465px)  {/*this section for when the nav doesn't fit horizontally adapted from https://koen.kivits.com/articles/pure-css-menu/*/
   .normnav {
     display: none;
   }
@@ -283,7 +283,7 @@ h3 {
     padding: 0px;
   }
 }
-@media screen and (min-width : 1024px) {
+@media screen and (min-width : 1024px) { /*increase images when on larger screens*/
   .busimg {
     width: 640px;
   }
