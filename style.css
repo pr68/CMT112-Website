@@ -21,7 +21,7 @@ nav{
   margin: 0px;
   background-color: black;
   padding: 15px;
-  position: fixed;
+  position: fixed; /*to keep it viewable while scrolling*/
   width: 100%;
   top: 0px;
 }
@@ -47,12 +47,12 @@ a {
   text-decoration: none;
 }
 
-.address {
+.address { /*don't show the address on mobile for space*/
   display: none;
 }
 
 .desktopphoto {
-  display: none;
+  display: none; /*to not display some images*/
 }
 
 img {
@@ -61,7 +61,7 @@ img {
   border-radius: 10px;
 }
 
-.link {
+.link { /*to make the link look more like a button*/
   text-align: center;
   color: white;
   border: 1px solid white;
@@ -72,10 +72,10 @@ img {
 
 .link:hover {
   background-color: white;
-  color: black;
+  color: black; /*changes colour while hovering*/
 }
 
-.link:active {
+.link:active { /*moves the link down slightly as if being pressed*/
   position: relative;
   top: 5px;
   box-shadow: 0px 0px 0px;
@@ -85,7 +85,7 @@ img {
   color: inherit;
   text-decoration: underline;
 }
-.dropdown{
+.dropdown{ /*don't display the dropdown automatically*/
   display: none;
 }
 .dropcontent{
@@ -137,14 +137,14 @@ h3 {
   pointer-events: none;
   cursor: default;
 }
-#logo {
+#logo { /*don't display logo on mobile*/
   display: none;
 }
 
 /*Following code for desktop*/
 @media screen and (min-width : 800px) {
   body {
-    display: grid;
+    display: grid; /*setting up grid*/
     grid-template-areas: "header header"
     "section section"
     "nav article"
@@ -160,14 +160,14 @@ h3 {
     border-radius: 0px;
     margin: 0px;
     color: white;
-    background: linear-gradient(to bottom left, darkred 60%, black);
+    background: linear-gradient(to bottom left, darkred 60%, black); /*making the background change colour to match the nav bar*/
     padding-bottom: 20px;
   }
   nav{
     grid-area: nav;
     position: static;
     width: auto;
-    background: linear-gradient(black 75%, darkred);
+    background: linear-gradient(black 75%, darkred); /*making the background colour change to match the footer*/
     top: auto;
   }
   article{
@@ -180,13 +180,13 @@ h3 {
     margin: 0px;
     background-color: darkred;
   }
-  section {
+  section { /*for the index.html screen*/
     grid-area: section;
   }
-  .desktopphoto {
+  .desktopphoto { /*displaying images only on the desktop*/
     display: inline-block;
   }
-  .address {
+  .address { /*displaying address on desktop*/
     display: block;
   }
   .link {
@@ -216,7 +216,7 @@ h3 {
   .fbmob {
     display: none;
   }
-  .busimg,figcaption {
+  .busimg,figcaption { /*changing the buses.html so that the figcaption displays to the right instead of below*/
   display: inline-block;
   vertical-align: middle;
 }
@@ -226,7 +226,7 @@ h3 {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .busimg:hover {
+  .busimg:hover { /*showing an image of the inside of the bus on hover*/
     content: url(businside.png);
   }
   #logo {
